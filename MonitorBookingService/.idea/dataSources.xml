@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@172.18.6.28" uuid="ca1b6b91-d5a2-48ce-a4d9-6f8372afce70">
-      <driver-ref>oracle</driver-ref>
+    <data-source source="LOCAL" name="LocalMysql" uuid="9be9f8cf-86a2-48cd-8a2c-6a97a8b1b7c8">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <auto-commit>false</auto-commit>
-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
-      <jdbc-url>jdbc:oracle:thin:@172.18.6.28:1521:orcl</jdbc-url>
-      <driver-properties>
-        <property name="v$session.program" value="DataGrip" />
-      </driver-properties>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/dbtutorial?serverTimezone=UTC</jdbc-url>
     </data-source>
   </component>
 </project>

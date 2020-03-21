@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ticketCenter">
+    <output-path>$PROJECT_DIR$/classes/artifacts/ticketCenter</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MonitorBookingService" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="jackson-all-1.7.2.jar" module-name="MonitorBookingService" />
+          <element id="library" level="module" name="log4j-1.2.8.jar" module-name="MonitorBookingService" />
+          <element id="library" level="module" name="ojdbc6.jar" module-name="MonitorBookingService" />
+          <element id="library" level="module" name="commons-pool2-2.4.2.jar" module-name="MonitorBookingService" />
+          <element id="library" level="module" name="jedis-2.6.1.jar" module-name="MonitorBookingService" />
+          <element id="library" level="module" name="activemq-all-5.11.1.jar" module-name="MonitorBookingService" />
+          <element id="library" level="application" name="javadoc-api" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.15" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

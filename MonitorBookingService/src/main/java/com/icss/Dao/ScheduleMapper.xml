@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.Dao.ScheduleMapper">
+  <resultMap id="BaseResultMap" type="com.icss.Entity.Schedule">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="train" jdbcType="VARCHAR" property="train" />
+    <result column="departure" jdbcType="TIMESTAMP" property="departure" />
+    <result column="duration" jdbcType="TIME" property="duration" />
+    <result column="arrival" jdbcType="VARCHAR" property="arrival" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, departure, duration, arrival
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.icss.Entity.ScheduleKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from schedule
+    where id = #{id,jdbcType=INTEGER}
+      and name = #{name,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.icss.Entity.ScheduleKey">
+    delete from schedule
+    where id = #{id,jdbcType=INTEGER}
+      and name = #{name,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.icss.Entity.Schedule">
+    insert into schedule (id, name, departure, 
+      duration, arrival)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{departure,jdbcType=TIMESTAMP}, 
+      #{duration,jdbcType=TIME}, #{arrival,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.icss.Entity.Schedule">
+    insert into schedule
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="departure != null">
+        departure,
+      </if>
+      <if test="duration != null">
+        duration,
+      </if>
+      <if test="arrival != null">
+        arrival,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="departure != null">
+        #{departure,jdbcType=TIMESTAMP},
+      </if>
+      <if test="duration != null">
+        #{duration,jdbcType=TIME},
+      </if>
+      <if test="arrival != null">
+        #{arrival,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icss.Entity.Schedule">
+    update schedule
+    <set>
+      <if test="departure != null">
+        departure = #{departure,jdbcType=TIMESTAMP},
+      </if>
+      <if test="duration != null">
+        duration = #{duration,jdbcType=TIME},
+      </if>
+      <if test="arrival != null">
+        arrival = #{arrival,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+      and name = #{name,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icss.Entity.Schedule">
+    update schedule
+    set departure = #{departure,jdbcType=TIMESTAMP},
+      duration = #{duration,jdbcType=TIME},
+      arrival = #{arrival,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+      and name = #{name,jdbcType=VARCHAR}
+  </update>
+</mapper>

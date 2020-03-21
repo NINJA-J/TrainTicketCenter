@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.Dao.TrainMapper">
+  <resultMap id="BaseResultMap" type="com.icss.Entity.Train">
+    <id column="name" jdbcType="VARCHAR" property="name" />
+    <result column="departure" jdbcType="INTEGER" property="departure" />
+    <result column="destination" jdbcType="INTEGER" property="destination" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.icss.Entity.Train">
+    <result column="stations" jdbcType="LONGVARCHAR" property="stations" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    name, departure, destination
+  </sql>
+  <sql id="Blob_Column_List">
+    stations
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from train
+    where name = #{name,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from train
+    where name = #{name,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.icss.Entity.Train">
+    insert into train (name, departure, destination, 
+      stations)
+    values (#{name,jdbcType=VARCHAR}, #{departure,jdbcType=INTEGER}, #{destination,jdbcType=INTEGER}, 
+      #{stations,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.icss.Entity.Train">
+    insert into train
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        name,
+      </if>
+      <if test="departure != null">
+        departure,
+      </if>
+      <if test="destination != null">
+        destination,
+      </if>
+      <if test="stations != null">
+        stations,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="departure != null">
+        #{departure,jdbcType=INTEGER},
+      </if>
+      <if test="destination != null">
+        #{destination,jdbcType=INTEGER},
+      </if>
+      <if test="stations != null">
+        #{stations,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icss.Entity.Train">
+    update train
+    <set>
+      <if test="departure != null">
+        departure = #{departure,jdbcType=INTEGER},
+      </if>
+      <if test="destination != null">
+        destination = #{destination,jdbcType=INTEGER},
+      </if>
+      <if test="stations != null">
+        stations = #{stations,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where name = #{name,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.icss.Entity.Train">
+    update train
+    set departure = #{departure,jdbcType=INTEGER},
+      destination = #{destination,jdbcType=INTEGER},
+      stations = #{stations,jdbcType=LONGVARCHAR}
+    where name = #{name,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icss.Entity.Train">
+    update train
+    set departure = #{departure,jdbcType=INTEGER},
+      destination = #{destination,jdbcType=INTEGER}
+    where name = #{name,jdbcType=VARCHAR}
+  </update>
+</mapper>

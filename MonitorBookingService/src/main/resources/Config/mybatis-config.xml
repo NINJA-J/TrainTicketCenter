@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="config/mysql.properties"/>
+
+    <plugins>
+        <!-- com.github.pagehelper为PageHelper类所在包名 -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!-- 使用MySQL方言的分页 -->
+            <property name="helperDialect" value="mysql"/><!--如果使用mysql，这里value为mysql-->
+            <!--            <property name="pageSizeZero" value="true"/>-->
+        </plugin>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <!-- 配置数据库连接信息 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${mysql.driver}" />
+                <property name="url" value="${mysql.url}" />
+                <property name="username" value="${mysql.username}" />
+                <property name="password" value="${mysql.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="UserMapper.xml"/>
+        <mapper resource="ArticleMapper.xml"/>
+        <mapper resource="CommentMapper.xml"/>
+        <mapper resource="ProposalMapper.xml"/>
+        <mapper resource="StandardMapper.xml"/>
+        <mapper resource="SysStandardMapper.xml"/>
+        <mapper resource="ReferInfoMapper.xml"/>
+    </mappers>
+</configuration>
