@@ -1,1 +1,8 @@
+com.icss.Service.ActiveMQConfig=org.springframework.stereotype.Component
+com.icss.Service.Listener=org.springframework.stereotype.Component
+com.icss.Service.MybatisConfig=org.springframework.stereotype.Component
+com.icss.Service.RedisConfig=org.springframework.stereotype.Component
+com.icss.Service.RedisService=org.springframework.stereotype.Component
+com.icss.Service.SeatSerivce=org.springframework.stereotype.Component
 com.icss.Service.TicketService=org.springframework.stereotype.Component
+com.icss.start.StartConsumer=org.springframework.stereotype.Component

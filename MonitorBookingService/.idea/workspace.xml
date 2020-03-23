@@ -2,93 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="024d77a5-ff8a-4db2-b827-c655198a3ea2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ticketCenter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jms_jms_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_activemq_activemq_all_5_15_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/ScheduleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/ScheduleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/SeatMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/SeatMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/StationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/StationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/TicketMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/TicketMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/TrainMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/TrainMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Schedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/ScheduleKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Seat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/SeatKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Station.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Train.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Service/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Config/generatorConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Config/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Config/spring-activemq.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Properties/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/DELL.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Config/ActiveMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Config/MybatisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Service/RedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/Service/SeatSerivce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/icss/start/StartConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Config/spring-redis.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ActiveMQTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/RedisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ticketCenter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ticketCenter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca1b6b91-d5a2-48ce-a4d9-6f8372afce70.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca1b6b91-d5a2-48ce-a4d9-6f8372afce70/storage_v2/_src_/schema/CONNER.2ZTSdg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca1b6b91-d5a2-48ce-a4d9-6f8372afce70/storage_v2/_src_/schema/PUBLIC.aaZQjQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca1b6b91-d5a2-48ce-a4d9-6f8372afce70/storage_v2/_src_/schema/SYS.rUIBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca1b6b91-d5a2-48ce-a4d9-6f8372afce70/storage_v2/_src_/schema/SYSTEM.L2avkg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_jms_jms_1_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MonitorBookingService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MonitorBookingService.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/biz/JMSConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Service/JMSConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/biz/UserBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Service/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/AreaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/AreaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/BanCiDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/BanCiDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/BaseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/SeatDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/SeatDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/StationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/StationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/TicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/TicketDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/TrainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/TrainDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/dto/JMSDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/dto/JMSDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/entity/BanCi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/BanCi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/entity/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Seat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/entity/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Station.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/entity/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/ui/StartConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/ui/StartConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/util/DbInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/util/DbInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/util/JMSConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/util/JMSConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/util/JsonDateSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/util/JsonDateSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/util/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/util/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/icss/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/util/RedisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Properties/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Dao/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/AreaDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/BanCiDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/BaseDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/DaoFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/SeatDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/StationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/TicketDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/TrainDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Dao/old/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/ScheduleKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/ScheduleKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Seat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/SeatKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/SeatKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Station.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Station.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/Train.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/BanCi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Seat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Station.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Entity/old/Train.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Service/JMSConsumerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Service/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Service/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/Service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Service/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/dto/JMSDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Entity/JMSDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/ui/StartConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/util/DbInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/util/JMSConnectionFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/util/JsonDateSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Util/JsonDateSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/util/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/icss/Util/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/icss/util/RedisUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Config/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Config/mybatis-gengerateMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Config/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Config/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Config/spring-activemq.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Config/spring-activemq.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Properties/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Properties/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,10 +152,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -190,14 +168,14 @@
       <recent name="D:\Projects\JavaProjects\TrainTicketCenter\MonitorBookingService\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TicketService">
+  <component name="RunManager" selected="Application.StartConsumer">
     <configuration name="StartConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.icss.ui.StartConsumer" />
+      <option name="MAIN_CLASS_NAME" value="com.icss.start.StartConsumer" />
       <module name="MonitorBookingService" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.icss.ui.*" />
+          <option name="PATTERN" value="com.icss.start.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -211,7 +189,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.icss.Service.*" />
+          <option name="PATTERN" value="com.icss.Config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -221,6 +199,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.testRedisValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MonitorBookingService" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RedisTest" />
+      <option name="METHOD_NAME" value="testRedisValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -341,14 +330,16 @@
     </configuration>
     <list>
       <item itemvalue="Application.StartConsumer" />
+      <item itemvalue="Application.TicketService" />
+      <item itemvalue="JUnit.RedisTest.testRedisValue" />
       <item itemvalue="Maven.MonitorBookingService [mybatis-generator:generate...]" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.31" />
-      <item itemvalue="Application.TicketService" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TicketService" />
         <item itemvalue="Application.StartConsumer" />
+        <item itemvalue="JUnit.RedisTest.testRedisValue" />
+        <item itemvalue="Application.TicketService" />
       </list>
     </recent_temporary>
   </component>
@@ -367,10 +358,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:LocalMysql" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -407,7 +394,9 @@
       <workItem from="1533519579277" duration="12000" />
       <workItem from="1584714348674" duration="32000" />
       <workItem from="1584752251542" duration="339000" />
-      <workItem from="1584752958527" duration="21240000" />
+      <workItem from="1584752958527" duration="21787000" />
+      <workItem from="1584876791303" duration="3381000" />
+      <workItem from="1584929390721" duration="23661000" />
     </task>
     <servers />
   </component>
@@ -418,6 +407,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Notifications" timestamp="1584887701602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1584887701602" />
     <state x="552" y="178" key="#Project_Structure" timestamp="1584755912973">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -426,6 +419,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584756373714" />
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1584948909785">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584948909785" />
+    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1584962230470">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584962230470" />
     <state x="580" y="198" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1584755119366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -434,38 +435,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="497" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584757441949" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584785509182">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584957735463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584785509182" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1584785509232">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584957735463" />
+    <state width="1877" height="235" key="GridCell.Tab.0.bottom" timestamp="1584968680846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584785509232" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1584785509232">
+    <state width="1877" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584968680846" />
+    <state width="1877" height="235" key="GridCell.Tab.0.center" timestamp="1584968680846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584785509232" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1584785509232">
+    <state width="1877" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584968680846" />
+    <state width="1877" height="235" key="GridCell.Tab.0.left" timestamp="1584968680846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584785509232" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1584785509232">
+    <state width="1877" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584968680846" />
+    <state width="1877" height="235" key="GridCell.Tab.0.right" timestamp="1584968680846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584785509232" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1584776475880">
+    <state width="1877" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584968680846" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1584949254183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584776475880" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584949254183" />
     <state x="669" y="159" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584772914445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="159" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584772914445" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584761736844">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584929694623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584761736844" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584929694623" />
     <state x="555" y="203" key="spring file set editor" timestamp="1584784496835">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

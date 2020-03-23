@@ -1,20 +1,14 @@
 package com.icss.Service;
 
 import com.icss.Dao.*;
-import com.icss.Dao.old.*;
 import com.icss.Entity.*;
-import com.icss.Entity.old.Order;
+//import com.icss.Entity.old.Order;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.codehaus.jackson.map.ObjectMapper;
+//import org.codehaus.jackson.map.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import redis.clients.jedis.Jedis;
-
-import com.icss.dto.JMSDto;
-import com.icss.util.Log;
-import com.icss.util.RedisUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -23,8 +17,15 @@ import java.util.Map;
 @Service
 public class TicketService {
 
+	static {
+		System.out.println("Ticket Service Initiated...");
+	}
+
 	@Autowired
 	private SqlSessionFactory sqlSessionFactory;
+
+	@Autowired
+	private SeatSerivce seatSerivce;
 
 	public static int GenerateCover( int s, int e){
 		int t = 0;
@@ -45,29 +46,14 @@ public class TicketService {
 	public boolean buyTicket(Ticket ticket){
 		String seatno = issueTicket(ticket);             //出票
 
-		Order order = new Order();
-		order.setSeatno(ticket.getSeat());
-		order.setOrderno(ticket.getId().toString());
-		order.setUname(ticket.getOwner());
-		addOrderMap(order); 							   // 写入redis新订单集合中
+//		Order order = new Order();
+//		order.setSeatno(ticket.getSeat());
+//		order.setOrderno(ticket.getId().toString());
+//		order.setUname(ticket.getOwner());
+//		addOrderMap(order); 							   // 写入redis新订单集合中
 
 		return seatno != null;
 	}
-
-//	/**
-//	 * 退票逻辑
-//	 *  1. 获取所有票的信息
-//	 *  2. 退掉每张票
-//	 * @param orders
-//	 * @throws Exception
-//	 */
-//	public void refoundTicket(List<String> orders) throws Exception {
-//		TicketDao td = new TicketDao();
-////		List<Ticket> tickets = td.getTicketsByOrder(orders);
-////		for(Ticket t:tickets){
-////			td.refoundTicket(t);
-////		}
-//	}
 
 	/**
 	 * 退票
@@ -89,30 +75,6 @@ public class TicketService {
 		sqlSession.commit();
 		return true;
 	}
-	
-//	/**
-//	 * 出票  (如果出票失败，seatno为null)
-//	 * @param jd
-//	 * @return
-//	 * @throws Exception
-//	 */
-//	private  String updateTicketState(JMSDto jd){
-//
-//		String seatno = null;
-//
-//		UserDao userDao = new UserDao();
-//		try{
-//			Thread.sleep(2000);                     										//延时模拟
-//			seatno = userDao.updateTicketState(jd); //更新票的信息
-//		}catch(Exception e){
-//			e.printStackTrace();
-//			Log.logger.error(e.getMessage());
-//		}finally{
-//			userDao.closeConnection();
-//		}
-//
-//		return seatno;
-//	}
 
 	/**
 	 * 出票：遍历所有可购买的车票，成功即返回
@@ -124,10 +86,10 @@ public class TicketService {
 		String seatNo = null;
 
 //		Thread.sleep(2000);                     										//延时模拟
-		int occupation = GenerateCover(ticket.getDeparture(), ticket.getArrival());
-
+//		int occupation = GenerateCover(ticket.getDeparture(), ticket.getArrival());
+;
 		System.out.println("sStation ind = " + ticket.getDeparture() + ", eStation ind = " + ticket.getArrival());
-		List<Seat> seats = getValidSeats(ticket.getScheduleKey(), occupation);
+		List<Seat> seats = seatSerivce.getValidSeats(ticket.getScheduleKey(), ticket.getOccupation());
 		if( seats.size() == 0 ){
 			System.out.println("no seats available");
 			return null;
@@ -147,38 +109,27 @@ public class TicketService {
 	 * 向redis中添加新订单.
 	 * @param order
 	 */
-	private void addOrderMap(Order order) {
-		Jedis jedis = null;
-		
-		try{
-			System.out.println("订单写入redis:" + order.getOrderno() + " ---- " + order.getSeatno() + " ------ " + order.getUname());
-			//无论成功,不成功还是出现了异常都需要发送订单数据到redis中,根据作为号是否为null进行判断
-			jedis = RedisUtil.getJedis();
-			ObjectMapper mapper = new ObjectMapper();  
-			String orderJson = mapper.writeValueAsString(order);
-			jedis.hset("new_orderMap", order.getOrderno(), orderJson);  //未被处理的新订单的集合.
-		}catch(Exception e){
-			e.printStackTrace();
-			Log.logger.error(e.getMessage());
-		}finally{
-			if(jedis != null){
-				jedis.close();
-			}
-		}
-	}
+//	private void addOrderMap(Order order) {
+//		Jedis jedis = null;
+//
+//		try{
+//			System.out.println("订单写入redis:" + order.getOrderno() + " ---- " + order.getSeatno() + " ------ " + order.getUname());
+//			//无论成功,不成功还是出现了异常都需要发送订单数据到redis中,根据作为号是否为null进行判断
+////			jedis = RedisUtil.getJedis();
+//			ObjectMapper mapper = new ObjectMapper();
+//			String orderJson = mapper.writeValueAsString(order);
+//			jedis.hset("new_orderMap", order.getOrderno(), orderJson);  //未被处理的新订单的集合.
+//		}catch(Exception e){
+//			e.printStackTrace();
+//			Log.logger.error(e.getMessage());
+//		}finally{
+//			if(jedis != null){
+//				jedis.close();
+//			}
+//		}
+//	}
 
 	// Basic Services
-
-	public List<Seat> getValidSeats(ScheduleKey scheduleKey, int occupation){
-		Map<String, Object> cond = new HashMap<String, Object>();
-		cond.put("train", scheduleKey.getTrain());
-		cond.put("schedule", scheduleKey.getId());
-		cond.put("occupation", occupation);
-
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		SeatMapper seatMapper = sqlSession.getMapper(SeatMapper.class);
-		return seatMapper.getValidSeats(cond);
-	}
 
 	public boolean addTicket(Seat seat, Ticket ticket){
 		Map<String, Object> cond = new HashMap<String, Object>();

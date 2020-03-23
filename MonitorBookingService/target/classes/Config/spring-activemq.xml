@@ -16,7 +16,7 @@
 
     <jms:listener-container
             container-type="default"
-            connection-factory="cachedConnFactory"
+            connection-factory="cachConFactory"
             acknowledge="auto">
         <jms:listener destination="${activemq.order.consumer}"
                       ref="ticketMessageListener"

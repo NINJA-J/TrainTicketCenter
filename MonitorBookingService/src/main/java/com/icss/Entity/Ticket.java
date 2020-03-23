@@ -1,6 +1,17 @@
 package com.icss.Entity;
 
-public class Ticket {
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.icss.Service.TicketService;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
+
+@Setter
+@Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class Ticket implements Serializable {
     public static final int STATE_INITIALIZED   = 0;
     public static final int STATE_REGISTERED    = 1;
     public static final int STATE_ISSUED        = 2;
@@ -22,75 +33,36 @@ public class Ticket {
 
     private Integer arrival;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTrain() {
-        return train;
-    }
-
-    public void setTrain(String train) {
-        this.train = train == null ? null : train.trim();
-    }
-
-    public String getSeat() {
-        return seat;
-    }
-
-    public void setSeat(String seat) {
-        this.seat = seat == null ? null : seat.trim();
-    }
-
-    public Integer getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(Integer schedule) {
-        this.schedule = schedule;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state == null ? null : state.trim();
-    }
-
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner == null ? null : owner.trim();
-    }
-
-    public Integer getDeparture() {
-        return departure;
-    }
-
-    public void setDeparture(Integer departure) {
-        this.departure = departure;
-    }
-
-    public Integer getArrival() {
-        return arrival;
-    }
-
-    public void setArrival(Integer arrival) {
-        this.arrival = arrival;
-    }
-
+    @JsonIgnore
     public ScheduleKey getScheduleKey(){
         ScheduleKey scheduleKey = new ScheduleKey();
-        scheduleKey.setId(getSchedule());
-        scheduleKey.setTrain(getTrain());
+        scheduleKey.setId(schedule);
+        scheduleKey.setTrain(train);
 
         return scheduleKey;
+    }
+
+    @JsonIgnore
+    public int getOccupation(){
+        return TicketService.GenerateCover(departure, arrival);
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", train='" + train + '\'' +
+                ", seat='" + seat + '\'' +
+                ", schedule=" + schedule +
+                ", state='" + state + '\'' +
+                ", owner='" + owner + '\'' +
+                ", departure=" + departure +
+                ", arrival=" + arrival +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object other){
+        return this.toString().equals(other.toString());
     }
 }

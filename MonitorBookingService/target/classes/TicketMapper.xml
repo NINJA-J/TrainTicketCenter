@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.Dao.TicketMapper">
+  <resultMap id="BaseResultMap" type="com.icss.Entity.Ticket">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="train" jdbcType="VARCHAR" property="train" />
+    <result column="seat" jdbcType="VARCHAR" property="seat" />
+    <result column="schedule" jdbcType="INTEGER" property="schedule" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="owner" jdbcType="VARCHAR" property="owner" />
+    <result column="departure" jdbcType="INTEGER" property="departure" />
+    <result column="arrival" jdbcType="INTEGER" property="arrival" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, train, seat, schedule, state, owner, departure, arrival
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ticket
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from ticket
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.icss.Entity.Ticket">
+    insert into ticket (id, train, seat, 
+      schedule, state, owner, 
+      departure, arrival)
+    values (#{id,jdbcType=INTEGER}, #{train,jdbcType=VARCHAR}, #{seat,jdbcType=VARCHAR}, 
+      #{schedule,jdbcType=INTEGER}, #{state,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR}, 
+      #{departure,jdbcType=INTEGER}, #{arrival,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.icss.Entity.Ticket"
+          useGeneratedKeys="true" keyProperty="id">
+    insert into ticket
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="train != null">
+        train,
+      </if>
+      <if test="seat != null">
+        seat,
+      </if>
+      <if test="schedule != null">
+        schedule,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="owner != null">
+        owner,
+      </if>
+      <if test="departure != null">
+        departure,
+      </if>
+      <if test="arrival != null">
+        arrival,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="train != null">
+        #{train,jdbcType=VARCHAR},
+      </if>
+      <if test="seat != null">
+        #{seat,jdbcType=VARCHAR},
+      </if>
+      <if test="schedule != null">
+        #{schedule,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null">
+        #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="departure != null">
+        #{departure,jdbcType=INTEGER},
+      </if>
+      <if test="arrival != null">
+        #{arrival,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icss.Entity.Ticket">
+    update ticket
+    <set>
+      <if test="train != null">
+        train = #{train,jdbcType=VARCHAR},
+      </if>
+      <if test="seat != null">
+        seat = #{seat,jdbcType=VARCHAR},
+      </if>
+      <if test="schedule != null">
+        schedule = #{schedule,jdbcType=INTEGER},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null">
+        owner = #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="departure != null">
+        departure = #{departure,jdbcType=INTEGER},
+      </if>
+      <if test="arrival != null">
+        arrival = #{arrival,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icss.Entity.Ticket">
+    update ticket
+    set train = #{train,jdbcType=VARCHAR},
+      seat = #{seat,jdbcType=VARCHAR},
+      schedule = #{schedule,jdbcType=INTEGER},
+      state = #{state,jdbcType=VARCHAR},
+      owner = #{owner,jdbcType=VARCHAR},
+      departure = #{departure,jdbcType=INTEGER},
+      arrival = #{arrival,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="cancelTicket" parameterType="com.icss.Entity.Ticket">
+    update ticket set status = #{STATUS_CANCELED} where id = #{id}
+  </update>
+</mapper>
